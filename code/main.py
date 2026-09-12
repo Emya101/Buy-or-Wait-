@@ -202,19 +202,451 @@ def test_request_loading():
     print("✓ 4A request loading passed")
 
 
+    # --------------------------------------------------
+# Historical information available at request time
+# --------------------------------------------------
+
+def historical_events(user_events, request_date):
+
+    history = user_events[
+        (user_events["event_date"] < request_date)
+        & (user_events["status"] == "settled")
+        & (user_events["include_in_cashflow"])
+        & (
+            user_events["direction"].isin(
+                ["debit", "credit"]
+            )
+        )
+        & (
+            user_events[
+                "normalized_amount"
+            ].notna()
+        )
+    ].copy()
+
+    return history
+
+
+# --------------------------------------------------
+# Detect monthly recurrence
+# --------------------------------------------------
+
+def find_monthly_patterns(history):
+
+    patterns = []
+
+    history = history.copy()
+
+    history["day_of_month"] = (
+        history["event_date"].dt.day
+    )
+
+    grouped = history.groupby(
+        [
+            "category",
+            "direction",
+            "day_of_month"
+        ]
+    )
+
+    for (
+        category,
+        direction,
+        day
+    ), group in grouped:
+
+        group = group.sort_values(
+            "event_date"
+        )
+
+        if len(group) < 3:
+            continue
+
+        dates = group[
+            "event_date"
+        ].tolist()
+
+        consecutive_months = 0
+
+        for i in range(
+            1,
+            len(dates)
+        ):
+            previous = dates[i - 1]
+            current = dates[i]
+
+            month_difference = (
+                (current.year - previous.year) * 12
+                + current.month
+                - previous.month
+            )
+
+            if month_difference == 1:
+                consecutive_months += 1
+
+        if consecutive_months < 2:
+            continue
+
+        patterns.append({
+            "category": category,
+            "direction": direction,
+            "recurrence_type": "monthly",
+            "day_of_month": int(day),
+            "estimated_amount": (
+                group[
+                    "normalized_amount"
+                ].mean()
+            ),
+            "last_event_date": (
+                group[
+                    "event_date"
+                ].max()
+            ),
+        })
+
+    return patterns
+
+
+# --------------------------------------------------
+# Detect exact fixed intervals
+# --------------------------------------------------
+
+def find_fixed_interval_patterns(history):
+
+    patterns = []
+
+    grouped = history.groupby(
+        [
+            "category",
+            "direction"
+        ]
+    )
+
+    for (
+        category,
+        direction
+    ), group in grouped:
+
+        group = group.sort_values(
+            "event_date"
+        )
+
+        dates = group[
+            "event_date"
+        ].tolist()
+
+        # 4 events gives us 3 intervals.
+        if len(dates) < 4:
+            continue
+
+        gaps = [
+            (
+                dates[i]
+                - dates[i - 1]
+            ).days
+            for i in range(
+                1,
+                len(dates)
+            )
+        ]
+
+        if len(set(gaps)) != 1:
+            continue
+
+        interval = gaps[0]
+
+        if not 2 <= interval <= 27:
+            continue
+
+        patterns.append({
+            "category": category,
+            "direction": direction,
+            "recurrence_type": (
+                "fixed_interval"
+            ),
+            "interval_days": interval,
+            "estimated_amount": (
+                group[
+                    "normalized_amount"
+                ].mean()
+            ),
+            "last_event_date": (
+                group[
+                    "event_date"
+                ].max()
+            ),
+        })
+
+    return patterns
+
+
+# --------------------------------------------------
+# Project fixed-interval recurrence
+# --------------------------------------------------
+
+def project_fixed_interval(
+    pattern,
+    start_date,
+    end_date
+):
+
+    projected = []
+
+    next_date = (
+        pattern["last_event_date"]
+        + timedelta(
+            days=pattern[
+                "interval_days"
+            ]
+        )
+    )
+
+    while next_date <= end_date:
+
+        if next_date >= start_date:
+
+            projected.append({
+                "date": next_date,
+                "category": (
+                    pattern["category"]
+                ),
+                "direction": (
+                    pattern["direction"]
+                ),
+                "amount": (
+                    pattern[
+                        "estimated_amount"
+                    ]
+                ),
+                "source": (
+                    "projected_fixed_interval"
+                ),
+            })
+
+        next_date += timedelta(
+            days=pattern[
+                "interval_days"
+            ]
+        )
+
+    return projected
+
+
+# --------------------------------------------------
+# Project monthly recurrence
+# --------------------------------------------------
+
+def project_monthly(
+    pattern,
+    start_date,
+    end_date
+):
+
+    projected = []
+
+    current_month = (
+        start_date.replace(day=1)
+    )
+
+    while current_month <= end_date:
+
+        try:
+
+            event_date = (
+                current_month.replace(
+                    day=pattern[
+                        "day_of_month"
+                    ]
+                )
+            )
+
+        except ValueError:
+
+            current_month = (
+                current_month
+                + pd.DateOffset(
+                    months=1
+                )
+            )
+
+            continue
+
+        if (
+            start_date
+            <= event_date
+            <= end_date
+        ):
+
+            projected.append({
+                "date": event_date,
+                "category": (
+                    pattern[
+                        "category"
+                    ]
+                ),
+                "direction": (
+                    pattern[
+                        "direction"
+                    ]
+                ),
+                "amount": (
+                    pattern[
+                        "estimated_amount"
+                    ]
+                ),
+                "source": (
+                    "projected_monthly"
+                ),
+            })
+
+        current_month = (
+            current_month
+            + pd.DateOffset(
+                months=1
+            )
+        )
+
+    return projected
+
+
+# --------------------------------------------------
+# TEST 4B
+# --------------------------------------------------
+
+def test_recurrence_detection():
+
+    request, profile, user_events = (
+        get_request_state(
+            "request_26"
+        )
+    )
+
+    history = historical_events(
+        user_events,
+        request["request_date"]
+    )
+
+    # No future leakage.
+    assert (
+        history["event_date"].max()
+        < request["request_date"]
+    )
+
+    monthly = find_monthly_patterns(
+        history
+    )
+
+    intervals = (
+        find_fixed_interval_patterns(
+            history
+        )
+    )
+
+    monthly_lookup = {
+        (
+            p["category"],
+            p["direction"],
+            p["day_of_month"]
+        )
+        for p in monthly
+    }
+
+    assert (
+        "rent",
+        "debit",
+        3
+    ) in monthly_lookup
+
+    assert (
+        "utilities",
+        "debit",
+        7
+    ) in monthly_lookup
+
+    assert (
+        "salary",
+        "credit",
+        8
+    ) in monthly_lookup
+
+    assert (
+        "salary",
+        "credit",
+        22
+    ) in monthly_lookup
+
+    assert (
+        "streaming",
+        "debit",
+        10
+    ) in monthly_lookup
+
+    interval_lookup = {
+        (
+            p["category"],
+            p["direction"]
+        ): p["interval_days"]
+        for p in intervals
+    }
+
+    assert (
+        interval_lookup[
+            ("groceries", "debit")
+        ]
+        == 10
+    )
+
+    assert (
+        interval_lookup[
+            ("dining", "debit")
+        ]
+        == 21
+    )
+
+    assert (
+        interval_lookup[
+            ("transport", "debit")
+        ]
+        == 21
+    )
+
+    print(
+        "✓ 4B recurrence detection passed"
+    )
+
+
+# --------------------------------------------------
+# Run Stage 4A + 4B
+# --------------------------------------------------
+
 if __name__ == "__main__":
 
     test_request_loading()
+    test_recurrence_detection()
 
     request, profile, user_events = (
         get_request_state("request_26")
     )
 
-    print("\nREQUEST")
-    print(request)
+    history = historical_events(
+        user_events,
+        request["request_date"]
+    )
 
-    print("\nPROFILE")
-    print(profile)
+    monthly = find_monthly_patterns(
+        history
+    )
 
-    print("\nFIRST 5 EVENTS")
-    print(user_events.head())
+    intervals = find_fixed_interval_patterns(
+        history
+    )
+
+    print("\nMONTHLY PATTERNS")
+
+    for pattern in monthly:
+        print(pattern)
+
+    print("\nFIXED INTERVAL PATTERNS")
+
+    for pattern in intervals:
+        print(pattern)
