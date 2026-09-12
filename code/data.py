@@ -2,6 +2,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from evidence import apply_image_evidence
+
 
 # --------------------------------------------------
 # Paths
@@ -14,22 +16,6 @@ DATASET = ROOT / "dataset"
 # --------------------------------------------------
 # Load data
 # --------------------------------------------------
-
-requests = pd.read_csv(DATASET / "requests.csv")
-profiles = pd.read_csv(DATASET / "financial_profiles.csv")
-events = pd.read_csv(DATASET / "financial_events.csv")
-exchange_rates = pd.read_csv(DATASET / "exchange_rates.csv")
-request_payment_options = pd.read_csv(
-    DATASET / "request_payment_options.csv"
-)
-
-request_payment_options[
-    "first_payment_date"
-] = pd.to_datetime(
-    request_payment_options[
-        "first_payment_date"
-    ]
-)
 
 requests = pd.read_csv(
     DATASET / "requests.csv"
@@ -50,6 +36,16 @@ exchange_rates = pd.read_csv(
 request_payment_options = pd.read_csv(
     DATASET / "request_payment_options.csv"
 )
+
+
+# --------------------------------------------------
+# Apply resolved image evidence
+# --------------------------------------------------
+
+events = apply_image_evidence(
+    events
+)
+
 
 # --------------------------------------------------
 # Convert date columns
@@ -74,6 +70,14 @@ events["settlement_date"] = pd.to_datetime(
 
 exchange_rates["rate_date"] = pd.to_datetime(
     exchange_rates["rate_date"]
+)
+
+request_payment_options[
+    "first_payment_date"
+] = pd.to_datetime(
+    request_payment_options[
+        "first_payment_date"
+    ]
 )
 
 
