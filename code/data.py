@@ -19,7 +19,37 @@ requests = pd.read_csv(DATASET / "requests.csv")
 profiles = pd.read_csv(DATASET / "financial_profiles.csv")
 events = pd.read_csv(DATASET / "financial_events.csv")
 exchange_rates = pd.read_csv(DATASET / "exchange_rates.csv")
+request_payment_options = pd.read_csv(
+    DATASET / "request_payment_options.csv"
+)
 
+request_payment_options[
+    "first_payment_date"
+] = pd.to_datetime(
+    request_payment_options[
+        "first_payment_date"
+    ]
+)
+
+requests = pd.read_csv(
+    DATASET / "requests.csv"
+)
+
+profiles = pd.read_csv(
+    DATASET / "financial_profiles.csv"
+)
+
+events = pd.read_csv(
+    DATASET / "financial_events.csv"
+)
+
+exchange_rates = pd.read_csv(
+    DATASET / "exchange_rates.csv"
+)
+
+request_payment_options = pd.read_csv(
+    DATASET / "request_payment_options.csv"
+)
 
 # --------------------------------------------------
 # Convert date columns
