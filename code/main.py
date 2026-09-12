@@ -1219,6 +1219,282 @@ def test_request_26_timeline():
         "✓ request_26 90-day timeline passed"
     )
 
+    # --------------------------------------------------
+# Simulate running balance across timeline
+# --------------------------------------------------
+
+def simulate_balance(
+    starting_balance,
+    minimum_balance,
+    timeline
+):
+
+    balance = float(
+        starting_balance
+    )
+
+    minimum_balance = float(
+        minimum_balance
+    )
+
+    lowest_balance = balance
+    lowest_balance_date = None
+
+    safe = True
+
+    simulated_timeline = []
+
+    for event in timeline:
+
+        amount = float(
+            event["amount"]
+        )
+
+        if event["direction"] == "debit":
+
+            balance -= amount
+
+        elif event["direction"] == "credit":
+
+            balance += amount
+
+        else:
+
+            raise ValueError(
+                f"Unexpected direction: "
+                f"{event['direction']}"
+            )
+
+        # Track lowest point reached.
+        if balance < lowest_balance:
+
+            lowest_balance = balance
+            lowest_balance_date = (
+                event["date"]
+            )
+
+        above_minimum = (
+            balance >= minimum_balance
+        )
+
+        if not above_minimum:
+
+            safe = False
+
+        simulated_timeline.append({
+            **event,
+            "balance_after": balance,
+            "above_minimum": above_minimum,
+        })
+
+    return {
+        "safe": safe,
+        "starting_balance": float(
+            starting_balance
+        ),
+        "minimum_balance": (
+            minimum_balance
+        ),
+        "ending_balance": balance,
+        "lowest_balance": (
+            lowest_balance
+        ),
+        "lowest_balance_date": (
+            lowest_balance_date
+        ),
+        "timeline": (
+            simulated_timeline
+        ),
+    }
+
+    # --------------------------------------------------
+# TEST 4E — balance simulator
+# --------------------------------------------------
+
+def test_balance_simulator():
+
+    # ------------------------------------------
+    # SAFE SCENARIO
+    # ------------------------------------------
+
+    safe_timeline = [
+        {
+            "date": pd.Timestamp(
+                "2025-08-01"
+            ),
+            "category": "test_expense",
+            "direction": "debit",
+            "amount": 200.0,
+            "source": "test",
+        },
+        {
+            "date": pd.Timestamp(
+                "2025-08-02"
+            ),
+            "category": "test_income",
+            "direction": "credit",
+            "amount": 100.0,
+            "source": "test",
+        },
+        {
+            "date": pd.Timestamp(
+                "2025-08-03"
+            ),
+            "category": "test_expense",
+            "direction": "debit",
+            "amount": 400.0,
+            "source": "test",
+        },
+    ]
+
+    safe_result = simulate_balance(
+        starting_balance=1000,
+        minimum_balance=300,
+        timeline=safe_timeline
+    )
+
+    # 1000
+    # -200 = 800
+    # +100 = 900
+    # -400 = 500
+
+    assert (
+        safe_result["ending_balance"]
+        == 500.0
+    )
+
+    assert (
+        safe_result["lowest_balance"]
+        == 500.0
+    )
+
+    assert (
+        safe_result["safe"]
+        is True
+    )
+
+
+    # ------------------------------------------
+    # UNSAFE SCENARIO
+    # ------------------------------------------
+
+    unsafe_timeline = [
+        {
+            "date": pd.Timestamp(
+                "2025-08-01"
+            ),
+            "category": "large_bill",
+            "direction": "debit",
+            "amount": 800.0,
+            "source": "test",
+        },
+        {
+            "date": pd.Timestamp(
+                "2025-08-02"
+            ),
+            "category": "income",
+            "direction": "credit",
+            "amount": 600.0,
+            "source": "test",
+        },
+    ]
+
+    unsafe_result = simulate_balance(
+        starting_balance=1000,
+        minimum_balance=300,
+        timeline=unsafe_timeline
+    )
+
+    # 1000
+    # -800 = 200  ← below minimum
+    # +600 = 800
+    #
+    # Ending balance is safe,
+    # but the forecast itself is NOT.
+
+    assert (
+        unsafe_result["ending_balance"]
+        == 800.0
+    )
+
+    assert (
+        unsafe_result["lowest_balance"]
+        == 200.0
+    )
+
+    assert (
+        unsafe_result["safe"]
+        is False
+    )
+
+    assert (
+        unsafe_result[
+            "lowest_balance_date"
+        ]
+        == pd.Timestamp(
+            "2025-08-01"
+        )
+    )
+
+    print(
+        "✓ 4E balance simulator passed"
+    )
+
+    # --------------------------------------------------
+# TEST 4E — real request baseline
+# --------------------------------------------------
+
+def test_request_26_balance_simulation():
+
+    request, profile, timeline = (
+        build_financial_timeline(
+            "request_26"
+        )
+    )
+
+    result = simulate_balance(
+        starting_balance=(
+            profile[
+                "current_available_balance"
+            ]
+        ),
+        minimum_balance=(
+            profile[
+                "minimum_balance_to_keep"
+            ]
+        ),
+        timeline=timeline
+    )
+
+    assert (
+        len(result["timeline"])
+        == len(timeline)
+    )
+
+    assert pd.notna(
+        result["ending_balance"]
+    )
+
+    assert pd.notna(
+        result["lowest_balance"]
+    )
+
+    # Verify simulator's safety result
+    # agrees with every timeline row.
+    expected_safe = all(
+        event["above_minimum"]
+        for event in result["timeline"]
+    )
+
+    assert (
+        result["safe"]
+        == expected_safe
+    )
+
+    print(
+        "✓ request_26 baseline simulation passed"
+    )
+
 if __name__ == "__main__":
 
     # ==================================================
@@ -1457,11 +1733,115 @@ if __name__ == "__main__":
 
     print("\n✓ 4D REAL TIMELINE PASSED")
 
+        # ==================================================
+    # 4E — RUNNING BALANCE SIMULATION
+    # ==================================================
+
+    print("\n========================================")
+    print("4E — RUNNING BALANCE SIMULATION")
+    print("========================================")
+
+    test_balance_simulator()
+    test_request_26_balance_simulation()
+
+    request, profile, timeline = (
+        build_financial_timeline(
+            "request_26"
+        )
+    )
+
+    simulation = simulate_balance(
+        starting_balance=(
+            profile[
+                "current_available_balance"
+            ]
+        ),
+        minimum_balance=(
+            profile[
+                "minimum_balance_to_keep"
+            ]
+        ),
+        timeline=timeline
+    )
+
+    print(
+        "\nStarting balance:",
+        f"{simulation['starting_balance']:.2f}"
+    )
+
+    print(
+        "Minimum allowed:",
+        f"{simulation['minimum_balance']:.2f}"
+    )
+
+    print("\nFirst 15 simulated events:")
+
+    for event in simulation[
+        "timeline"
+    ][:15]:
+
+        status = (
+            "SAFE"
+            if event["above_minimum"]
+            else "BELOW MINIMUM"
+        )
+
+        print(
+            event["date"].date(),
+            "|",
+            f"{event['direction']:<6}",
+            "|",
+            f"{event['category']:<15}",
+            "|",
+            f"{event['amount']:>12.2f}",
+            "| balance:",
+            f"{event['balance_after']:>12.2f}",
+            "|",
+            status
+        )
+
+    print(
+        "\nLowest balance:",
+        f"{simulation['lowest_balance']:.2f}"
+    )
+
+    if (
+        simulation[
+            "lowest_balance_date"
+        ]
+        is not None
+    ):
+
+        print(
+            "Lowest balance date:",
+            simulation[
+                "lowest_balance_date"
+            ].date()
+        )
+
+    print(
+        "Ending balance:",
+        f"{simulation['ending_balance']:.2f}"
+    )
+
+    print(
+        "Minimum-balance headroom:",
+        f"{simulation['lowest_balance'] - simulation['minimum_balance']:.2f}"
+    )
+
+    print(
+        "Baseline forecast safe:",
+        simulation["safe"]
+    )
+
+    print(
+        "\n✓ 4E REAL BALANCE SIMULATION PASSED"
+    )
 
     # ==================================================
     # FINAL RESULT
     # ==================================================
 
     print("\n========================================")
-    print("✓ ALL STAGE 4A–4D TESTS PASSED")
+    print("✓ ALL STAGE 4A–4E TESTS PASSED")
     print("========================================")
