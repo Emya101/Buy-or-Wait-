@@ -613,20 +613,672 @@ def test_recurrence_detection():
     print(
         "✓ 4B recurrence detection passed"
     )
+# --------------------------------------------------
+# Get explicitly supplied future events
+# --------------------------------------------------
+
+def get_explicit_future_events(
+    user_events,
+    request_date,
+    end_date
+):
+
+    explicit_events = []
+
+    eligible = user_events[
+        (user_events["include_in_cashflow"])
+        & (
+            user_events["direction"].isin(
+                ["debit", "credit"]
+            )
+        )
+        & (
+            user_events[
+                "normalized_amount"
+            ].notna()
+        )
+    ].copy()
+
+    for _, event in eligible.iterrows():
+
+        event_date = event["event_date"]
+        settlement_date = event["settlement_date"]
+        direction = event["direction"]
+        status = event["status"]
+
+        # ------------------------------------------
+        # DEBITS
+        # ------------------------------------------
+
+        if direction == "debit":
+
+            # Pending money already committed before
+            # the request must be reserved immediately.
+            if (
+                status == "pending"
+                and event_date < request_date
+            ):
+                cashflow_date = request_date
+
+            # Historical completed debit is already
+            # reflected in current_available_balance.
+            elif event_date < request_date:
+                continue
+
+            else:
+                cashflow_date = event_date
+
+        # ------------------------------------------
+        # CREDITS
+        # ------------------------------------------
+
+        elif direction == "credit":
+
+            # Pending credits were already excluded
+            # by include_in_cashflow().
+            #
+            # Confirmed money is usable only when it
+            # actually settles.
+            if pd.isna(settlement_date):
+                continue
+            cashflow_date = settlement_date
+
+            # Already received before request.
+            if cashflow_date < request_date:
+                continue
+
+        else:
+            continue
+
+        # Must fall inside our 90-day forecast.
+        if not (
+            request_date
+            <= cashflow_date
+            <= end_date
+        ):
+            continue
+
+        explicit_events.append({
+            "date": cashflow_date,
+            "event_id": event["event_id"],
+            "category": event["category"],
+            "direction": direction,
+            "amount": event["normalized_amount"],
+            "status": status,
+            "source": "explicit_future_event",
+        })
+
+    return explicit_events
 
 
 # --------------------------------------------------
-# Run Stage 4A + 4B
+# TEST 4C
 # --------------------------------------------------
+
+def test_explicit_future_events():
+
+    start = pd.Timestamp(
+        "2025-08-03"
+    )
+
+    end = (
+        start
+        + timedelta(days=90)
+    )
+
+    test_events = pd.DataFrame([
+        {
+            "event_id": "test_scheduled_debit",
+            "event_date": pd.Timestamp("2025-08-08"),
+            "settlement_date": pd.NaT,
+            "category": "utilities",
+            "direction": "debit",
+            "status": "scheduled",
+            "normalized_amount": 100.0,
+        },
+        {
+            "event_id": "test_pending_debit",
+            "event_date": pd.Timestamp("2025-08-01"),
+            "settlement_date": pd.Timestamp("2025-08-07"),
+            "category": "rent",
+            "direction": "debit",
+            "status": "pending",
+            "normalized_amount": 200.0,
+        },
+        {
+            "event_id": "test_pending_credit",
+            "event_date": pd.Timestamp("2025-08-05"),
+            "settlement_date": pd.Timestamp("2025-08-06"),
+            "category": "salary",
+            "direction": "credit",
+            "status": "pending",
+            "normalized_amount": 300.0,
+        },
+        {
+            "event_id": "test_scheduled_credit",
+            "event_date": pd.Timestamp("2025-08-05"),
+            "settlement_date": pd.Timestamp("2025-08-10"),
+            "category": "salary",
+            "direction": "credit",
+            "status": "scheduled",
+            "normalized_amount": 400.0,
+        },
+        {
+            "event_id": "test_failed_debit",
+            "event_date": pd.Timestamp("2025-08-06"),
+            "settlement_date": pd.NaT,
+            "category": "utilities",
+            "direction": "debit",
+            "status": "failed",
+            "normalized_amount": 500.0,
+        },
+        {
+            "event_id": "test_historical_debit",
+            "event_date": pd.Timestamp("2025-08-01"),
+            "settlement_date": pd.Timestamp("2025-08-01"),
+            "category": "groceries",
+            "direction": "debit",
+            "status": "settled",
+            "normalized_amount": 600.0,
+        },
+        {
+    "event_id": "test_unsettled_credit",
+    "event_date": pd.Timestamp("2025-08-07"),
+    "settlement_date": pd.NaT,
+    "category": "salary",
+    "direction": "credit",
+    "status": "scheduled",
+    "normalized_amount": 350.0,
+},
+    ])
+
+    test_events["include_in_cashflow"] = (
+        test_events.apply(
+            include_in_cashflow,
+            axis=1
+        )
+    )
+
+    future = get_explicit_future_events(
+        test_events,
+        start,
+        end
+    )
+
+    by_id = {
+        event["event_id"]: event
+        for event in future
+    }
+
+    assert "test_scheduled_debit" in by_id
+    assert "test_pending_debit" in by_id
+    assert "test_scheduled_credit" in by_id
+
+    assert "test_pending_credit" not in by_id
+    assert "test_failed_debit" not in by_id
+    assert "test_historical_debit" not in by_id
+    assert "test_unsettled_credit" not in by_id
+
+    assert (
+        by_id["test_scheduled_debit"]["date"]
+        == pd.Timestamp("2025-08-08")
+    )
+
+    assert (
+        by_id["test_pending_debit"]["date"]
+        == start
+    )
+
+    assert (
+        by_id["test_scheduled_credit"]["date"]
+        == pd.Timestamp("2025-08-10")
+    )
+
+    print(
+        "✓ 4C explicit-event handling passed"
+    )
+
+def test_request_26_has_no_explicit_future_events():
+
+    request, profile, user_events = (
+        get_request_state(
+            "request_26"
+        )
+    )
+
+    start = request["request_date"]
+    end = start + timedelta(days=90)
+
+    future = get_explicit_future_events(
+        user_events,
+        start,
+        end
+    )
+
+    assert len(future) == 0
+
+    print(
+        "✓ request_26 explicit-event sanity check passed"
+    )
+
+    # --------------------------------------------------
+# Project all detected recurring events
+# --------------------------------------------------
+
+def project_recurring_events(
+    history,
+    start_date,
+    end_date
+):
+
+    projected_events = []
+
+    monthly_patterns = (
+        find_monthly_patterns(
+            history
+        )
+    )
+
+    interval_patterns = (
+        find_fixed_interval_patterns(
+            history
+        )
+    )
+
+    for pattern in monthly_patterns:
+
+        projected_events.extend(
+            project_monthly(
+                pattern,
+                start_date,
+                end_date
+            )
+        )
+
+    for pattern in interval_patterns:
+
+        projected_events.extend(
+            project_fixed_interval(
+                pattern,
+                start_date,
+                end_date
+            )
+        )
+
+    return projected_events
+
+
+# --------------------------------------------------
+# Combine projected and explicit future events
+# --------------------------------------------------
+
+def combine_timelines(
+    projected_events,
+    explicit_events
+):
+
+    # Explicit data overrides an inferred
+    # recurrence for the same financial event.
+    explicit_keys = {
+        (
+            pd.Timestamp(
+                event["date"]
+            ).normalize(),
+            event["category"],
+            event["direction"]
+        )
+        for event in explicit_events
+    }
+
+    combined = list(
+        explicit_events
+    )
+
+    for event in projected_events:
+
+        key = (
+            pd.Timestamp(
+                event["date"]
+            ).normalize(),
+            event["category"],
+            event["direction"]
+        )
+
+        # Do not double-count a recurrence
+        # when an explicit event exists.
+        if key in explicit_keys:
+            continue
+
+        combined.append(
+            event
+        )
+
+    # Conservative same-day ordering:
+    # debit before credit.
+    def sort_key(event):
+
+        direction_priority = (
+            0
+            if event["direction"] == "debit"
+            else 1
+        )
+
+        return (
+            pd.Timestamp(
+                event["date"]
+            ),
+            direction_priority,
+            event["category"]
+        )
+
+    combined.sort(
+        key=sort_key
+    )
+
+    return combined
+
+
+# --------------------------------------------------
+# Build complete 90-day financial timeline
+# --------------------------------------------------
+
+def build_financial_timeline(
+    request_id
+):
+
+    request, profile, user_events = (
+        get_request_state(
+            request_id
+        )
+    )
+
+    start_date = (
+        request["request_date"]
+    )
+
+    end_date = (
+        start_date
+        + timedelta(days=90)
+    )
+
+    # Only information available before
+    # the request is used for recurrence.
+    history = historical_events(
+        user_events,
+        start_date
+    )
+
+    projected_events = (
+        project_recurring_events(
+            history,
+            start_date,
+            end_date
+        )
+    )
+
+    explicit_events = (
+        get_explicit_future_events(
+            user_events,
+            start_date,
+            end_date
+        )
+    )
+
+    timeline = combine_timelines(
+        projected_events,
+        explicit_events
+    )
+
+    return (
+        request,
+        profile,
+        timeline
+    )
+# --------------------------------------------------
+# TEST 4D — synthetic timeline combination
+# --------------------------------------------------
+
+def test_timeline_combination():
+
+    projected = [
+        {
+            "date": pd.Timestamp("2025-08-03"),
+            "category": "rent",
+            "direction": "debit",
+            "amount": 1000.0,
+            "source": "projected_monthly",
+        },
+        {
+            "date": pd.Timestamp("2025-08-07"),
+            "category": "utilities",
+            "direction": "debit",
+            "amount": 100.0,
+            "source": "projected_monthly",
+        },
+        {
+            "date": pd.Timestamp("2025-08-08"),
+            "category": "salary",
+            "direction": "credit",
+            "amount": 500.0,
+            "source": "projected_monthly",
+        },
+        {
+            "date": pd.Timestamp("2025-08-10"),
+            "category": "streaming",
+            "direction": "debit",
+            "amount": 50.0,
+            "source": "projected_monthly",
+        },
+    ]
+
+    explicit = [
+        {
+            "date": pd.Timestamp("2025-08-07"),
+            "event_id": "explicit_utilities",
+            "category": "utilities",
+            "direction": "debit",
+            "amount": 120.0,
+            "status": "scheduled",
+            "source": "explicit_future_event",
+        },
+        {
+            "date": pd.Timestamp("2025-08-08"),
+            "event_id": "explicit_fee",
+            "category": "fee",
+            "direction": "debit",
+            "amount": 25.0,
+            "status": "scheduled",
+            "source": "explicit_future_event",
+        },
+    ]
+
+    timeline = combine_timelines(
+        projected,
+        explicit
+    )
+
+    assert len(timeline) == 5
+
+    utilities = [
+        event
+        for event in timeline
+        if (
+            event["category"] == "utilities"
+            and event["date"]
+            == pd.Timestamp("2025-08-07")
+        )
+    ]
+
+    assert len(utilities) == 1
+    assert utilities[0]["amount"] == 120.0
+    assert (
+        utilities[0]["source"]
+        == "explicit_future_event"
+    )
+
+    dates = [
+        event["date"]
+        for event in timeline
+    ]
+
+    assert dates == sorted(dates)
+
+    august_8 = [
+        event
+        for event in timeline
+        if event["date"]
+        == pd.Timestamp("2025-08-08")
+    ]
+
+    assert august_8[0]["direction"] == "debit"
+    assert august_8[1]["direction"] == "credit"
+
+    print("✓ 4D timeline combination passed")
+# --------------------------------------------------
+# TEST 4D — real request timeline
+# --------------------------------------------------
+
+def test_request_26_timeline():
+
+    request, profile, timeline = (
+        build_financial_timeline(
+            "request_26"
+        )
+    )
+
+    start = request[
+        "request_date"
+    ]
+
+    end = (
+        start
+        + timedelta(days=90)
+    )
+
+    assert len(timeline) > 0
+
+    # Every event must remain inside
+    # the 90-day forecast.
+    assert all(
+        start
+        <= event["date"]
+        <= end
+        for event in timeline
+    )
+
+    # Timeline must already be sorted.
+    dates = [
+        event["date"]
+        for event in timeline
+    ]
+
+    assert dates == sorted(dates)
+
+    # request_26 begins on Aug 3.
+    # We know rent recurs on day 3.
+    rent_august = [
+        event
+        for event in timeline
+        if (
+            event["category"]
+            == "rent"
+            and event["direction"]
+            == "debit"
+            and event["date"]
+            == pd.Timestamp(
+                "2025-08-03"
+            )
+        )
+    ]
+
+    assert len(
+        rent_august
+    ) == 1
+
+    # We detected salary on day 8.
+    salary_august = [
+        event
+        for event in timeline
+        if (
+            event["category"]
+            == "salary"
+            and event["direction"]
+            == "credit"
+            and event["date"]
+            == pd.Timestamp(
+                "2025-08-08"
+            )
+        )
+    ]
+
+    assert len(
+        salary_august
+    ) == 1
+
+    print(
+        "✓ request_26 90-day timeline passed"
+    )
 
 if __name__ == "__main__":
 
+    # ==================================================
+    # 4A — REQUEST LOADING / NORMALIZATION
+    # ==================================================
+
+    print("\n========================================")
+    print("4A — REQUEST LOADING")
+    print("========================================")
+
     test_request_loading()
-    test_recurrence_detection()
 
     request, profile, user_events = (
         get_request_state("request_26")
     )
+
+    print("\nTest data:")
+    print("Request ID:", request["request_id"])
+    print("User ID:", request["user_id"])
+    print("Home currency:", profile["home_currency"])
+    print(
+        "Starting balance:",
+        profile["current_available_balance"]
+    )
+    print(
+        "Minimum balance:",
+        profile["minimum_balance_to_keep"]
+    )
+    print(
+        "Events loaded:",
+        len(user_events)
+    )
+
+    print("\nFirst 3 normalized events:")
+
+    print(
+        user_events[
+            [
+                "event_id",
+                "category",
+                "direction",
+                "amount",
+                "currency",
+                "normalized_amount"
+            ]
+        ].head(3)
+    )
+
+    print("\n✓ 4A PASSED")
+
+
+    # ==================================================
+    # 4B — RECURRENCE DETECTION
+    # ==================================================
+
+    print("\n========================================")
+    print("4B — RECURRENCE DETECTION")
+    print("========================================")
+
+    test_recurrence_detection()
 
     history = historical_events(
         user_events,
@@ -641,12 +1293,175 @@ if __name__ == "__main__":
         history
     )
 
-    print("\nMONTHLY PATTERNS")
+    print("\nMonthly patterns detected:")
 
     for pattern in monthly:
-        print(pattern)
 
-    print("\nFIXED INTERVAL PATTERNS")
+        print(
+            pattern["category"],
+            "→ day",
+            pattern["day_of_month"],
+            "|",
+            pattern["direction"],
+            "| amount:",
+            round(
+                pattern["estimated_amount"],
+                2
+            )
+        )
+
+    print("\nFixed interval patterns detected:")
 
     for pattern in intervals:
-        print(pattern)
+
+        print(
+            pattern["category"],
+            "→ every",
+            pattern["interval_days"],
+            "days",
+            "|",
+            pattern["direction"],
+            "| amount:",
+            round(
+                pattern["estimated_amount"],
+                2
+            )
+        )
+
+    print("\n✓ 4B PASSED")
+
+
+    # ==================================================
+    # 4C — EXPLICIT FUTURE EVENTS
+    # ==================================================
+
+    print("\n========================================")
+    print("4C — EXPLICIT FUTURE EVENTS")
+    print("========================================")
+
+    test_explicit_future_events()
+
+    print("\nSynthetic rules verified:")
+    print("✓ scheduled future debit → INCLUDED")
+    print("✓ pending debit → INCLUDED immediately")
+    print("✓ scheduled settled credit → INCLUDED")
+    print("✓ pending credit → EXCLUDED")
+    print("✓ failed debit → EXCLUDED")
+    print("✓ historical settled debit → EXCLUDED")
+    print("✓ unsettled credit → EXCLUDED")
+
+    print("\n✓ 4C SYNTHETIC TEST PASSED")
+
+
+    # ==================================================
+    # 4C — REAL DATA SANITY CHECK
+    # ==================================================
+
+    print("\n========================================")
+    print("4C — REAL DATA CHECK")
+    print("========================================")
+
+    test_request_26_has_no_explicit_future_events()
+
+    start = request["request_date"]
+    end = start + timedelta(days=90)
+
+    future = get_explicit_future_events(
+        user_events,
+        start,
+        end
+    )
+
+    print("\nRequest:", request["request_id"])
+    print("Forecast start:", start.date())
+    print("Forecast end:", end.date())
+    print(
+        "Explicit future events found:",
+        len(future)
+    )
+
+    if future:
+
+        for event in future:
+
+            print(
+                event["date"].date(),
+                event["direction"],
+                event["category"],
+                round(
+                    event["amount"],
+                    2
+                )
+            )
+
+    else:
+
+        print(
+            "No explicit future events "
+            "for this request."
+        )
+
+    print("\n✓ 4C REAL DATA CHECK PASSED")
+
+    # ==================================================
+    # 4D — COMPLETE 90-DAY TIMELINE
+    # ==================================================
+
+    print("\n========================================")
+    print("4D — FINANCIAL TIMELINE")
+    print("========================================")
+
+    test_timeline_combination()
+    test_request_26_timeline()
+
+    request, profile, timeline = (
+        build_financial_timeline(
+            "request_26"
+        )
+    )
+
+    print("\nRequest:", request["request_id"])
+
+    print(
+        "Forecast:",
+        request["request_date"].date(),
+        "→",
+        (
+            request["request_date"]
+            + timedelta(days=90)
+        ).date()
+    )
+
+    print(
+        "Timeline events:",
+        len(timeline)
+    )
+
+    print(
+        "\nFirst 15 timeline events:"
+    )
+
+    for event in timeline[:15]:
+
+        print(
+            event["date"].date(),
+            "|",
+            f"{event['direction']:<6}",
+            "|",
+            f"{event['category']:<15}",
+            "|",
+            f"{event['amount']:.2f}",
+            "|",
+            event["source"]
+        )
+
+    print("\n✓ 4D REAL TIMELINE PASSED")
+
+
+    # ==================================================
+    # FINAL RESULT
+    # ==================================================
+
+    print("\n========================================")
+    print("✓ ALL STAGE 4A–4D TESTS PASSED")
+    print("========================================")
