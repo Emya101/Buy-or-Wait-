@@ -55,6 +55,8 @@ def find_monthly_patterns(history):
             "event_date"
         )
 
+        last_event = group.iloc[-1]
+
         if len(group) < 3:
             continue
 
@@ -98,6 +100,9 @@ def find_monthly_patterns(history):
                     "event_date"
                 ].max()
             ),
+            "anchor_event_id": (
+                last_event["event_id"]
+            ),
         })
 
     return patterns
@@ -126,6 +131,8 @@ def find_fixed_interval_patterns(history):
         group = group.sort_values(
             "event_date"
         )
+
+        last_event = group.iloc[-1]
 
         dates = group[
             "event_date"
@@ -170,6 +177,9 @@ def find_fixed_interval_patterns(history):
                 group[
                     "event_date"
                 ].max()
+            ),
+            "anchor_event_id": (
+                last_event["event_id"]
             ),
         })
 
@@ -216,6 +226,11 @@ def project_fixed_interval(
                 ),
                 "source": (
                     "projected_fixed_interval"
+                ),
+                "anchor_event_id": (
+                    pattern[
+                        "anchor_event_id"
+                     ]
                 ),
             })
 
@@ -293,6 +308,11 @@ def project_monthly(
                 "source": (
                     "projected_monthly"
                 ),
+                "anchor_event_id": (
+                    pattern[
+                        "anchor_event_id"
+                    ]
+                    ),
             })
 
         current_month = (

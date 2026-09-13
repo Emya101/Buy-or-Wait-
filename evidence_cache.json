@@ -1,0 +1,5266 @@
+{
+  "image_events": {
+    "event_253": {
+      "event_id": "event_253",
+      "amount": 4365000,
+      "currency": "IDR",
+      "confidence": "high",
+      "evidence_text": "PAY SLIP Aug-2019 shows Net Pay: IDR 4,365,000, and the transfer line also states IDR 4,365,000.",
+      "image_id": "image_01",
+      "file": "image_01.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_1442": {
+      "event_id": "event_1442",
+      "amount": 100000,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The rent receipt dated 11/08/23 explicitly lists “Balance Due: 1,00,000.00,” corresponding to the outstanding rent balance.",
+      "image_id": "image_02",
+      "file": "image_02.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_1545": {
+      "event_id": "event_1545",
+      "amount": 41272.0,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Receipt dated 27/02/2026 shows 'Net Amount: 41272.0' and 'Cash Paid: 41272.00'.",
+      "image_id": "image_03",
+      "file": "image_03.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_1700": {
+      "event_id": "event_1700",
+      "amount": 7854,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The image shows only an 'Item Bill' of ₹2854.00 under 'TOTAL ORDER BILL DETAILS'; the final total/amount paid is not visible, so the transaction amount cannot be determined.",
+      "image_id": "image_04",
+      "file": "image_04.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_1786": {
+      "event_id": "event_1786",
+      "amount": 704.05,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The account summary states “Amount due till 06-Feb-2026 = 704.05,” and this month’s charges show “Total (₹) 704.05.”",
+      "image_id": "image_05",
+      "file": "image_05.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_3051": {
+      "event_id": "event_3051",
+      "amount": 1995,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The invoice's final Total is 1995.00, and the amount in words states: 'One Thousand And Nine Hundred And Ninety-Five Rupees And Zero Paisa Only.'",
+      "image_id": "image_06",
+      "file": "image_06.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_3231": {
+      "event_id": "event_3231",
+      "amount": 8528,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The paid tax invoice shows “Grand Total (RS) : 8528”; the detailed total above is 8528.10.",
+      "image_id": "image_07",
+      "file": "image_07.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_4535": {
+      "event_id": "event_4535",
+      "amount": 15339.0,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The receipt shows “Total Amount Received ₹ 15,339.00,” matching the sum of the listed maintenance charges.",
+      "image_id": "image_08",
+      "file": "image_08.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_5170": {
+      "event_id": "event_5170",
+      "amount": 723.0,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Receipt shows “Total Amount Received ₹ 723.00” for the water bill; the amount column also shows ₹723.00.",
+      "image_id": "image_09",
+      "file": "image_09.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_6033": {
+      "event_id": "event_6033",
+      "amount": 79679.26,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Invoice summary shows “Total ₹79,679.26” and “Balance Due ₹79,679.26”; amount in words states Indian Rupee Seventy-Nine Thousand Six Hundred Seventy-Nine and Twenty-Six Paise Only.",
+      "image_id": "image_10",
+      "file": "image_10.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_6859": {
+      "event_id": "event_6859",
+      "amount": 3650.0,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Provisional bill shows “Total Bill Amount: 3650.00” and “Amount Payable: 3650.00” dated 19-Jan-2023.",
+      "image_id": "image_11",
+      "file": "image_11.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_7307": {
+      "event_id": "event_7307",
+      "amount": 33.5,
+      "currency": "USD",
+      "confidence": "high",
+      "evidence_text": "Taxi receipt shows “Total: $33.50”; cash paid was $40.00 with $6.50 change.",
+      "image_id": "image_12",
+      "file": "image_12.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_7941": {
+      "event_id": "event_7941",
+      "amount": 2298,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Order summary shows “Total paid” as ₹2,298 for the two tote bags.",
+      "image_id": "image_13",
+      "file": "image_13.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_9421": {
+      "event_id": "event_9421",
+      "amount": 4593,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The handwritten amount in the document's TOTAL field is 4593.00.",
+      "image_id": "image_14",
+      "file": "image_14.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_9806": {
+      "event_id": "event_9806",
+      "amount": 9968,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "The invoice shows Currency: INR and a Grand Total under Total (Incl Taxes) of 9,968.00.",
+      "image_id": "image_15",
+      "file": "image_15.png",
+      "model": "gpt-5.6-sol"
+    },
+    "event_10521": {
+      "event_id": "event_10521",
+      "amount": 393.22,
+      "currency": "INR",
+      "confidence": "high",
+      "evidence_text": "Invoice shows Total 393.22; amount in words states 'Three Hundred and Ninety Three Rupees And Twenty Two Paise Only.' Payment method: WALLET.",
+      "image_id": "image_16",
+      "file": "image_16.png",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  "messages": {
+    "message_01": {
+      "message_id": "message_01",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 42750000,
+          "currency": "IDR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji bulanan naik menjadi IDR 42750000, berlaku mulai 2025-08-15."
+        }
+      ],
+      "summary": "Confirmed monthly salary increase to IDR 42,750,000 effective 2025-08-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_02": {
+      "message_id": "message_02",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "No amount or date is provided for the confirmed salary or one-time adjustment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_03": {
+      "message_id": "message_03",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Bonus kuartalan masih menunggu penilaian; jumlah dan tanggal belum disetujui."
+        }
+      ],
+      "summary": "Quarterly bonus remains unconfirmed and should not be forecast as income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_04": {
+      "message_id": "message_04",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1037.52,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is EUR 1037.52 and continues for the next payroll."
+        }
+      ],
+      "summary": "Confirmed temporary monthly pay of EUR 1,037.52 for the affected payroll cycle.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_05": {
+      "message_id": "message_05",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_578",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 149000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": "2024-09-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed salary is now expected on 2024-09-23, replacing the earlier payroll date."
+        }
+      ],
+      "summary": "Payroll credit date is replaced with 2024-09-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_06": {
+      "message_id": "message_06",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1422.85,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Next salary is reduced to EUR 1422.85 and will appear on the next payslip."
+        }
+      ],
+      "summary": "Next salary is confirmed at EUR 1,422.85.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_07": {
+      "message_id": "message_07",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Next payout is pending, may change, and is not withdrawable until completed."
+        }
+      ],
+      "summary": "Pending, changeable, non-withdrawable payout is excluded from forecasting.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_08": {
+      "message_id": "message_08",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 38760000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji pokok yang dikonfirmasi adalah IDR 38760000."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "unapproved",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Komisi dari transaksi yang masih berjalan belum disetujui dan belum dinyatakan diperoleh."
+        }
+      ],
+      "summary": "Confirmed base salary is IDR 38,760,000; unearned commissions are excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_09": {
+      "message_id": "message_09",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2026-03-25",
+          "replacement_date": null,
+          "new_status": "stopped",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Seasonal contract has ended; no off-season income or renewal is confirmed."
+        }
+      ],
+      "summary": "Seasonal recurring income has ended, with no confirmed replacement income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_10": {
+      "message_id": "message_10",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2717,
+          "currency": "EUR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of EUR 2717 resumes on 2025-08-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": "2025-08-01",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Regular salary of EUR 2,717 resumes on 2025-08-15, and a recurring childcare deduction begins in August.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_11": {
+      "message_id": "message_11",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1661,
+          "currency": "EUR",
+          "effective_date": "2026-01-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 1661; confirmed credit date 2026-01-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of EUR 1661 on 2026-01-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_12": {
+      "message_id": "message_12",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_1371",
+          "category": "rent",
+          "direction": "debit",
+          "amount": 63952,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Renewed lease increases monthly rent by 12%; current rent is INR 57100."
+        }
+      ],
+      "summary": "Monthly rent increases by 12%, from INR 57100 to INR 63952.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_13": {
+      "message_id": "message_13",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "Internal transfer between the user's own accounts; no net financial effect.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_14": {
+      "message_id": "message_14",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_1785",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 8640,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Refund initiated but has not reached the account; credit is not completed."
+        }
+      ],
+      "summary": "Merchant refund remains uncredited and should not be forecast as available cash.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_15": {
+      "message_id": "message_15",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "Portfolio market value changed, but no units were sold and no cash proceeds were generated.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_16": {
+      "message_id": "message_16",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "windfall",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Prize claim is still processing and has not been credited."
+        }
+      ],
+      "summary": "Prize payment remains uncredited and is not confirmed cash.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_17": {
+      "message_id": "message_17",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_2165",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": 33550,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Prize proceeds reached the account after withholding; claim is closed."
+        }
+      ],
+      "summary": "Prize proceeds are confirmed as received and there are no further scheduled payments.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_18": {
+      "message_id": "message_18",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "invoiced_income",
+          "direction": "credit",
+          "amount": 30780000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": "2025-08-15",
+          "new_status": "scheduled",
+          "confirmed": false,
+          "confidence": "medium",
+          "evidence_text": "Client approved IDR 30780000; settlement is only estimated for 2025-08-15."
+        }
+      ],
+      "summary": "Approved invoice payment is expected but not yet settled; other invoices remain unapproved.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_19": {
+      "message_id": "message_19",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Next payout is pending, earnings can change, and the balance is not withdrawable."
+        }
+      ],
+      "summary": "TaskLoop payout is pending and not confirmed or withdrawable.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_20": {
+      "message_id": "message_20",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1452,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is EUR 1452."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 653.4,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of EUR 653.40."
+        }
+      ],
+      "summary": "Next payroll includes confirmed salary of EUR 1452 plus EUR 653.40 in one-time arrears.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_21": {
+      "message_id": "message_21",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The current seasonal contract has ended; no off-season income or renewal is confirmed."
+        }
+      ],
+      "summary": "Seasonal salary income has ended, with no confirmed replacement income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_22": {
+      "message_id": "message_22",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 54120,
+          "currency": "ZAR",
+          "effective_date": "2025-02-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your first salary will be ZAR 54120; the confirmed credit date is 2025-02-15."
+        }
+      ],
+      "summary": "A first salary credit of ZAR 54,120 is confirmed for 2025-02-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_23": {
+      "message_id": "message_23",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "",
+      "model": "gpt-5.6-luna"
+    },
+    "message_24": {
+      "message_id": "message_24",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "invoice payment",
+          "direction": "credit",
+          "amount": 196000,
+          "currency": "INR",
+          "effective_date": "2024-12-15",
+          "replacement_date": null,
+          "new_status": "expected",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The client approved an invoice payment of INR 196000; settlement is expected on 2024-12-15."
+        }
+      ],
+      "summary": "An INR 196,000 invoice payment is approved but settlement is only expected, not confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_25": {
+      "message_id": "message_25",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_3230",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 12960,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The refund has been initiated but has not reached your account yet."
+        }
+      ],
+      "summary": "The INR 12,960 refund remains pending and should not be forecast as available funds.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_26": {
+      "message_id": "message_26",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_3256",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2988,
+          "currency": "USD",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your monthly salary has increased to USD 2988, applying from 2026-07-15."
+        }
+      ],
+      "summary": "Monthly salary changes to USD 2,988 starting 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_27": {
+      "message_id": "message_27",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 21090000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji rutin Anda untuk penggajian berikutnya adalah IDR 21090000."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 9490500,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Penyesuaian tunggakan satu kali sebesar IDR 9490500."
+        }
+      ],
+      "summary": "A recurring salary of IDR 21,090,000 and a one-time arrears credit of IDR 9,490,500 are confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_28": {
+      "message_id": "message_28",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_3491",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The prize proceeds have reached your account; the claim is now closed."
+        }
+      ],
+      "summary": "Prize proceeds are confirmed received and no further payments are scheduled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_29": {
+      "message_id": "message_29",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1760,
+          "currency": "EUR",
+          "effective_date": "2024-06-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your first salary will be EUR 1760; the confirmed credit date is 2024-06-15."
+        }
+      ],
+      "summary": "A first salary credit of EUR 1,760 is confirmed for 2024-06-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_30": {
+      "message_id": "message_30",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One household employment record has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 148000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The remaining confirmed monthly salary is INR 148000."
+        }
+      ],
+      "summary": "One household salary stream has ended; the remaining confirmed monthly salary is INR 148,000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_31": {
+      "message_id": "message_31",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 32870000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji pertama sebesar IDR 32870000 dikonfirmasi untuk 2024-09-15."
+        }
+      ],
+      "summary": "Gaji pertama sebesar IDR 32870000 dikonfirmasi untuk 2024-09-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_32": {
+      "message_id": "message_32",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 115000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary INR 115000 dengan tanggal kredit terkonfirmasi 2025-02-15."
+        }
+      ],
+      "summary": "Gaji pertama INR 115000 dikonfirmasi untuk 2025-02-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_33": {
+      "message_id": "message_33",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 17290000,
+          "currency": "IDR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji bulanan naik menjadi IDR 17290000 mulai 2026-07-15."
+        }
+      ],
+      "summary": "Gaji bulanan berubah menjadi IDR 17290000 mulai 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_34": {
+      "message_id": "message_34",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Pembayaran masih tertunda dan penghasilan mingguan masih dapat berubah; saldo belum dapat ditarik."
+        }
+      ],
+      "summary": "Penghasilan RideGrid masih tertunda, berubah-ubah, dan belum dapat ditarik.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_35": {
+      "message_id": "message_35",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_4535",
+          "category": "housing",
+          "direction": "debit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Pembayaran pemeliharaan properti diterima pada 24 July 2026."
+        }
+      ],
+      "summary": "Pembayaran pemeliharaan properti dikonfirmasi telah diterima.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_36": {
+      "message_id": "message_36",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 31464000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji bulanan sementara IDR 31464000 berlaku untuk penggajian berikutnya."
+        }
+      ],
+      "summary": "Gaji bulanan sementara sebesar IDR 31464000 dijadwalkan untuk penggajian berikutnya.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_37": {
+      "message_id": "message_37",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One household employment record has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 126000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Remaining confirmed monthly salary is INR 126000."
+        }
+      ],
+      "summary": "Satu pendapatan pekerjaan rumah tangga berakhir; gaji bulanan yang tersisa adalah INR 126000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_38": {
+      "message_id": "message_38",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 69000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary sebesar INR 69000 dikonfirmasi untuk 2024-06-15."
+        }
+      ],
+      "summary": "Gaji pertama sebesar INR 69000 dikonfirmasi untuk 2024-06-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_39": {
+      "message_id": "message_39",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_4994",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 230.4,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Refund telah dimulai tetapi belum masuk ke rekening; kredit belum selesai."
+        }
+      ],
+      "summary": "Refund masih tertunda dan belum dapat diperlakukan sebagai kredit yang diterima.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_40": {
+      "message_id": "message_40",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 42460,
+          "currency": "ZAR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji bulanan meningkat menjadi ZAR 42460 mulai 2026-07-15."
+        }
+      ],
+      "summary": "Gaji bulanan berubah menjadi ZAR 42460 mulai 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_41": {
+      "message_id": "message_41",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "Internal transfer notification provides no new amount, date, or forecastable change.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_42": {
+      "message_id": "message_42",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salah satu sumber pendapatan kerja rumah tangga telah berakhir."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 25840000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Sisa gaji bulanan yang dikonfirmasi adalah IDR 25840000."
+        }
+      ],
+      "summary": "One household employment income source ended; confirmed remaining monthly salary is IDR 25,840,000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_43": {
+      "message_id": "message_43",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Payout is still pending and the balance isn’t withdrawable until completed."
+        }
+      ],
+      "summary": "The next payout is pending and not yet withdrawable, so no confirmed income is forecast.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_44": {
+      "message_id": "message_44",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 530.4,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to USD 530.40."
+        }
+      ],
+      "summary": "The next salary is confirmed at USD 530.40.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_45": {
+      "message_id": "message_45",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The current seasonal contract has ended."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "unconfirmed",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "No off-season income or renewal has been confirmed."
+        }
+      ],
+      "summary": "Seasonal salary income has ended; no replacement or renewal is confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_46": {
+      "message_id": "message_46",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": 2112,
+          "currency": "USD",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The client approved an invoice payment of USD 2112; settlement is expected on 2025-08-15."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": null,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "awaiting_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The other submitted invoices are still awaiting approval."
+        }
+      ],
+      "summary": "A confirmed USD 2,112 invoice payment is expected on 2025-08-15; other invoices remain unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_47": {
+      "message_id": "message_47",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The foreign-currency refund is still processing and the home-currency credit may change."
+        }
+      ],
+      "summary": "The refund is still processing and its final credited amount is uncertain.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_48": {
+      "message_id": "message_48",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "bonus",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The quarterly bonus is subject to final review; amount and payment date have not been approved."
+        }
+      ],
+      "summary": "The quarterly bonus amount and payment date are not yet confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_49": {
+      "message_id": "message_49",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": 116000,
+          "currency": "INR",
+          "effective_date": "2026-04-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The client approved an invoice payment of INR 116000; settlement is expected on 2026-04-15."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "awaiting_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The other submitted invoices are still awaiting approval."
+        }
+      ],
+      "summary": "A confirmed INR 116,000 invoice payment is expected on 2026-04-15; other invoices remain unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_50": {
+      "message_id": "message_50",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_6324",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2496,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": "2025-02-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The confirmed salary is now expected on 2025-02-23, replacing the earlier payroll date."
+        }
+      ],
+      "summary": "The confirmed payroll credit date is replaced with 2025-02-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_51": {
+      "message_id": "message_51",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_6408",
+          "category": "rent",
+          "direction": "debit",
+          "amount": 12,
+          "currency": "EUR",
+          "effective_date": "2026-01-02",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Renewed lease increases monthly rent by 12%, applying from the next rent payment."
+        }
+      ],
+      "summary": "Monthly rent will increase by 12% from the next rent payment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_52": {
+      "message_id": "message_52",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_6532",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Displayed market value increased, but no units were sold and no cash proceeds were generated."
+        }
+      ],
+      "summary": "Unrealized investment valuation increased without generating cash.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_53": {
+      "message_id": "message_53",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 696,
+          "currency": "USD",
+          "effective_date": "2025-05-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of USD 696 is confirmed for 2025-05-15."
+        }
+      ],
+      "summary": "Confirmed one-time salary credit of USD 696 on 2025-05-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_54": {
+      "message_id": "message_54",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 18700,
+          "currency": "ZAR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary will be ZAR 18700 with a confirmed credit date of 2026-07-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of ZAR 18,700 on 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_55": {
+      "message_id": "message_55",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "rent",
+          "direction": "debit",
+          "amount": 41776,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Renewed lease increases monthly rent by 12% for the next rent payment."
+        }
+      ],
+      "summary": "Monthly rent will increase by 12% from the next rent payment; no matching rent event was provided.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_56": {
+      "message_id": "message_56",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 26180,
+          "currency": "ZAR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of ZAR 26180; settlement is expected on 2025-08-15."
+        }
+      ],
+      "summary": "Approved one-time invoice credit of ZAR 26,180 expected on 2025-08-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_57": {
+      "message_id": "message_57",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": "2026-04-04",
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Employment has ended and no regular salary payments are scheduled after the final settlement."
+        }
+      ],
+      "summary": "Regular salary payments stop after the final settlement.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_58": {
+      "message_id": "message_58",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 3072,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "Confirmed base salary is USD 3072."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Commission for open deals is still pending approval and excluded until earned."
+        }
+      ],
+      "summary": "Confirmed USD 3,072 base salary; pending commission is excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_59": {
+      "message_id": "message_59",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_7186",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 8880,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Refund has been initiated but has not reached the account yet."
+        }
+      ],
+      "summary": "Refund remains pending and is not yet cash received.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_60": {
+      "message_id": "message_60",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 158000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "Confirmed base salary is INR 158000."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Commission for open deals is pending approval and excluded until earned."
+        }
+      ],
+      "summary": "Confirmed INR 158,000 base salary; pending commission is excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_61": {
+      "message_id": "message_61",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "rent",
+          "direction": "debit",
+          "amount": 1037.57,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "Renewed lease increases monthly rent by 12%; the new amount applies from the next rent payment."
+        }
+      ],
+      "summary": "Monthly rent increases by 12%, calculated from the nearby USD 926.40 rent payment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_62": {
+      "message_id": "message_62",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1752,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your regular salary for the next payroll is USD 1752."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 788.4,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of USD 788.40."
+        }
+      ],
+      "summary": "Next payroll includes USD 1,752 regular salary and a confirmed one-time USD 788.40 arrears credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_63": {
+      "message_id": "message_63",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 62000,
+          "currency": "INR",
+          "effective_date": "2025-05-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of INR 62000 resumes on 2025-05-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2025-05-01",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "INR 62,000 salary resumes on 2025-05-15; a recurring childcare payment begins in May, with amount unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_64": {
+      "message_id": "message_64",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_7941",
+          "category": "shopping",
+          "direction": "debit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed_paid",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The tote bag order was paid in INR on 3 April 2026."
+        }
+      ],
+      "summary": "The tote bag order is confirmed paid, but the final amount is not stated.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_65": {
+      "message_id": "message_65",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 8618400,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary is IDR 8618400 and is currently scheduled for the payroll period."
+        }
+      ],
+      "summary": "Scheduled monthly salary is IDR 8,618,400.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_66": {
+      "message_id": "message_66",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 251000,
+          "currency": "INR",
+          "effective_date": "2026-01-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of INR 251000 resumes on 2026-01-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2026-01-01",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "INR 251,000 salary resumes on 2026-01-15; a recurring childcare payment begins in January, with amount unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_67": {
+      "message_id": "message_67",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": null,
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The cash prize requires payment of a release or processing charge before funds are received."
+        }
+      ],
+      "summary": "Potential prize proceeds and requested charges are unconfirmed and excluded from forecasting.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_68": {
+      "message_id": "message_68",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "income",
+          "direction": "credit",
+          "amount": 13420,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": "2026-07-15",
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The client approved an invoice payment of ZAR 13420; settlement is expected on 2026-07-15."
+        }
+      ],
+      "summary": "A confirmed ZAR 13,420 invoice payment is expected on 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_69": {
+      "message_id": "message_69",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_8575",
+          "category": "utilities",
+          "direction": "debit",
+          "amount": 166,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "outstanding_retry_pending",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The previous debit attempt failed; the bill remains outstanding and another debit will be attempted."
+        }
+      ],
+      "summary": "The EUR 166 bill remains outstanding after a failed debit and is subject to another attempt.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_70": {
+      "message_id": "message_70",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 49280,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your confirmed base salary is ZAR 49280."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "commission",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The commission shown for open deals is still pending approval and will stay out of the payout until earned."
+        }
+      ],
+      "summary": "Confirmed base salary is ZAR 49,280; open-deal commission is pending and excluded from the payout.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_71": {
+      "message_id": "message_71",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "windfall",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "payment_processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Prize claim is still in payment processing and has not been credited."
+        }
+      ],
+      "summary": "Prize proceeds are not yet credited and should not be forecast as confirmed money.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_72": {
+      "message_id": "message_72",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 924,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of EUR 924; settlement is expected on 2024-12-15."
+        }
+      ],
+      "summary": "A confirmed EUR 924 invoice payment is expected for settlement on 2024-12-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_73": {
+      "message_id": "message_73",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": "2025-05-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed salary is now expected on 2025-05-23, replacing the earlier payroll date."
+        }
+      ],
+      "summary": "The confirmed payroll date was moved to 2025-05-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_74": {
+      "message_id": "message_74",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1804,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": "2025-08-15",
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of EUR 1804 is confirmed for 2025-08-15."
+        }
+      ],
+      "summary": "A confirmed EUR 1,804 salary credit is scheduled for 2025-08-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_75": {
+      "message_id": "message_75",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_9420",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Prize proceeds have reached your account after withholding."
+        }
+      ],
+      "summary": "The prize proceeds reached the account and are settled after withholding.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_76": {
+      "message_id": "message_76",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 1419,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": "2026-04-15",
+          "new_status": "expected",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Client approved EUR 1419, but settlement is only expected on 2026-04-15."
+        }
+      ],
+      "summary": "The approved EUR 1,419 invoice payment has an expected settlement date but is not yet confirmed as received.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_77": {
+      "message_id": "message_77",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 164880,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is INR 164880 and continues for the next payroll."
+        }
+      ],
+      "summary": "Monthly salary is temporarily set to INR 164,880 for the next payroll.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_78": {
+      "message_id": "message_78",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 35860,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed base salary is ZAR 35860; commission remains pending approval."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "commission",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Commission for open deals is still pending approval and excluded until earned."
+        }
+      ],
+      "summary": "Confirmed base salary is ZAR 35,860; unapproved commission should be excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_79": {
+      "message_id": "message_79",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_9805",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "unrealized",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Displayed portfolio value moves with market prices and is not a realized cash amount."
+        }
+      ],
+      "summary": "The portfolio valuation is unrealized and should not be treated as available cash.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_80": {
+      "message_id": "message_80",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1815,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": "2024-12-15",
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 1815 is confirmed for 2024-12-15."
+        }
+      ],
+      "summary": "A confirmed EUR 1,815 first-salary credit is scheduled for 2024-12-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_81": {
+      "message_id": "message_81",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2123,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 2123 is scheduled for 2025-05-15 and payroll has approved it."
+        }
+      ],
+      "summary": "Confirmed scheduled first salary credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_82": {
+      "message_id": "message_82",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 33440,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed base salary is ZAR 33440."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Commission for open deals is still pending approval and excluded until earned."
+        }
+      ],
+      "summary": "Confirmed base salary update; pending commission excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_83": {
+      "message_id": "message_83",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 16720,
+          "currency": "ZAR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of ZAR 16720; settlement is expected on 2025-08-15."
+        }
+      ],
+      "summary": "Approved one-time invoice payment scheduled for settlement.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_84": {
+      "message_id": "message_84",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2026-04-01",
+          "replacement_date": null,
+          "new_status": "stopped",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Employment has ended and no regular salary payments are scheduled after final settlement."
+        }
+      ],
+      "summary": "Regular salary payments stop after employment termination.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_85": {
+      "message_id": "message_85",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 627,
+          "currency": "EUR",
+          "effective_date": "2024-06-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 627 with confirmed credit date 2024-06-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_86": {
+      "message_id": "message_86",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1296,
+          "currency": "USD",
+          "effective_date": "2026-09-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Employer confirmed a USD 1296 salary credit for 15 September 2026."
+        }
+      ],
+      "summary": "Confirmed salary credit; exchange-rate-converted settlement amount is not specified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_87": {
+      "message_id": "message_87",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 148200,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "reduced",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to INR 148200 due to approved unpaid leave."
+        }
+      ],
+      "summary": "Next salary is confirmed at the reduced amount.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_88": {
+      "message_id": "message_88",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_10699",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": 32450,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Prize proceeds have reached your account after withholding; the claim is closed."
+        },
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "windfall",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2024-08-31",
+          "replacement_date": null,
+          "new_status": "stopped",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "There are no further scheduled payments."
+        }
+      ],
+      "summary": "Prize proceeds are received and no further payments are scheduled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_89": {
+      "message_id": "message_89",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1188,
+          "currency": "EUR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary has increased to EUR 1188, applying from 2026-07-15."
+        }
+      ],
+      "summary": "Confirmed monthly salary increase effective 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_90": {
+      "message_id": "message_90",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 759,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is EUR 759."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 341.55,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of EUR 341.55."
+        }
+      ],
+      "summary": "Next payroll includes regular salary and a confirmed one-time arrears adjustment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_91": {
+      "message_id": "message_91",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 176000,
+          "currency": "INR",
+          "effective_date": "2025-05-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of INR 176000 resumes on 2025-05-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": "2025-05-01",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Salary resumes at INR 176000 and a recurring childcare payment begins in May 2025; childcare amount is unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_92": {
+      "message_id": "message_92",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_11129",
+          "category": "investment",
+          "direction": "credit",
+          "amount": 13062500,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Investment sale proceeds have entered the cash account; no proceeds remain pending."
+        }
+      ],
+      "summary": "Investment sale proceeds are confirmed as settled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_93": {
+      "message_id": "message_93",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 15390000,
+          "currency": "IDR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved invoice payment of IDR 15390000; settlement is expected on 2025-08-15."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Other submitted invoices are still awaiting approval."
+        }
+      ],
+      "summary": "One approved IDR 15390000 invoice payment is expected on 2025-08-15; other invoices remain unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_94": {
+      "message_id": "message_94",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The next TaskSprint payment is still pending and the balance is not yet withdrawable."
+        }
+      ],
+      "summary": "The pending TaskSprint payment is not confirmed or withdrawable.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_95": {
+      "message_id": "message_95",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 748,
+          "currency": "EUR",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of EUR 748 is confirmed for 2025-11-15."
+        }
+      ],
+      "summary": "A confirmed EUR 748 salary payment is scheduled for 2025-11-15; home-currency value is unknown.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_96": {
+      "message_id": "message_96",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 152000,
+          "currency": "INR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": "approved",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of INR 152000; settlement is expected on 2026-07-15."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Other submitted invoices are still awaiting approval."
+        }
+      ],
+      "summary": "One approved INR 152000 invoice payment is expected on 2026-07-15; other invoices remain unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_97": {
+      "message_id": "message_97",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 50160,
+          "currency": "ZAR",
+          "effective_date": "2024-09-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of ZAR 50160 resumes on 2024-09-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": "2024-09-01",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Salary resumes at ZAR 50160 and a recurring childcare payment begins in September 2024; childcare amount is unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_98": {
+      "message_id": "message_98",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "bonus",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending_approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The bonus remains subject to final review; amount and payment date are not approved."
+        }
+      ],
+      "summary": "The quarterly bonus is unconfirmed because its amount and payment date are pending approval.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_99": {
+      "message_id": "message_99",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_11925",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": 561,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Prize proceeds reached the account after withholding; the claim is now closed."
+        }
+      ],
+      "summary": "Prize proceeds are confirmed as received and no further payments are scheduled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_100": {
+      "message_id": "message_100",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2177.28,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is USD 2177.28 and continues for the next payroll."
+        }
+      ],
+      "summary": "The scheduled salary is temporarily reduced to USD 2177.28 for the affected payroll cycle.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_101": {
+      "message_id": "message_101",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": "2025-05-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed payroll date revised to 2025-05-23, replacing the earlier date."
+        }
+      ],
+      "summary": "Confirmed salary payment date moved to 2025-05-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_102": {
+      "message_id": "message_102",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1193.4,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Next salary is reduced to USD 1193.40 due to approved unpaid leave."
+        }
+      ],
+      "summary": "Next salary is confirmed at USD 1193.40.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_103": {
+      "message_id": "message_103",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2024-03-06",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Seasonal contract has ended; no off-season income or extension is confirmed."
+        }
+      ],
+      "summary": "Seasonal salary income has ended, with no replacement income confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_104": {
+      "message_id": "message_104",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 828.0,
+          "currency": "USD",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary increased to USD 828 effective 2026-07-15."
+        }
+      ],
+      "summary": "Monthly salary changes to USD 828 from 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_105": {
+      "message_id": "message_105",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_12575",
+          "category": "rent",
+          "direction": "debit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Renewed lease increases monthly rent by 12% for the next rent payment."
+        }
+      ],
+      "summary": "Monthly rent will increase by 12% from the next rent payment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_106": {
+      "message_id": "message_106",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_12709",
+          "category": "shopping",
+          "direction": "debit",
+          "amount": 134.75,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Extra card charge remains under investigation; no reversal has posted and the dispute is open."
+        }
+      ],
+      "summary": "The extra card charge remains pending and has not been reversed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_107": {
+      "message_id": "message_107",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 31900.0,
+          "currency": "ZAR",
+          "effective_date": "2025-02-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary will be ZAR 31900 with confirmed credit date 2025-02-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of ZAR 31,900 on 2025-02-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_108": {
+      "message_id": "message_108",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_13032",
+          "category": "investment",
+          "direction": "credit",
+          "amount": 53350.0,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Investment sale proceeds have settled in the cash account and no proceeds remain pending."
+        }
+      ],
+      "summary": "Investment sale proceeds of INR 53,350 are settled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_109": {
+      "message_id": "message_109",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 2040.0,
+          "currency": "USD",
+          "effective_date": "2024-12-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of USD 2040, with settlement expected on 2024-12-15."
+        }
+      ],
+      "summary": "A confirmed USD 2,040 invoice payment is expected to settle on 2024-12-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_110": {
+      "message_id": "message_110",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_13207",
+          "category": "windfall",
+          "direction": "credit",
+          "amount": 8228.0,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Prize proceeds reached the account after withholding; the claim is closed."
+        }
+      ],
+      "summary": "Prize proceeds of ZAR 8,228 are settled, with no further scheduled payments.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_111": {
+      "message_id": "message_111",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_13234",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 864,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": "2026-07-15",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of USD 864 has a confirmed credit date of 2026-07-15."
+        }
+      ],
+      "summary": "The first salary credit date is confirmed for 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_112": {
+      "message_id": "message_112",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 258000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is INR 258000."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 116100,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of INR 116100."
+        }
+      ],
+      "summary": "The next payroll includes INR 258000 regular salary and a confirmed one-time INR 116100 arrears adjustment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_113": {
+      "message_id": "message_113",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_13517",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1529,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": "2026-04-15",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of EUR 1529 resumes on 2026-04-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": "2026-04-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Salary resumes on 2026-04-15 and a recurring childcare payment begins in April 2026.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_114": {
+      "message_id": "message_114",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_13663",
+          "category": "investment",
+          "direction": "credit",
+          "amount": 19602,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "settled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Investment sale proceeds have settled in the cash account; no proceeds remain pending."
+        }
+      ],
+      "summary": "The investment sale proceeds are confirmed settled in the cash account.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_115": {
+      "message_id": "message_115",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 893.75,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The next salary is reduced to EUR 893.75."
+        }
+      ],
+      "summary": "The next salary amount is confirmed as EUR 893.75.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_116": {
+      "message_id": "message_116",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_13888",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 46170000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": "2024-09-15",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The first salary payment is confirmed for 2024-09-15."
+        }
+      ],
+      "summary": "The first salary payment date is confirmed for 2024-09-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_117": {
+      "message_id": "message_117",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "The message confirms a closed, already settled reimbursement and does not specify a new financial change.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_118": {
+      "message_id": "message_118",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "debit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The final home-currency amount will be determined when the transaction settles."
+        }
+      ],
+      "summary": "The final home-currency amount is not yet confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_119": {
+      "message_id": "message_119",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": "event_14173",
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": "2024-11-25",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One household employment record has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_14180",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1628,
+          "currency": "EUR",
+          "effective_date": "2024-11-25",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The remaining confirmed monthly salary is EUR 1628."
+        }
+      ],
+      "summary": "One household income has ended, while the remaining confirmed monthly salary is EUR 1628.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_120": {
+      "message_id": "message_120",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_14282",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 84000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": "2025-05-15",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of INR 84000 resumes on 2025-05-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": "2025-05-01",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Salary resumes on 2025-05-15 and a recurring childcare payment begins in May 2025.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_121": {
+      "message_id": "message_121",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_14399",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 1617.0,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The dispute is still open and no reversal has been posted."
+        }
+      ],
+      "summary": "The possible reversal of the duplicate card charge has not been posted and should not be forecast as income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_122": {
+      "message_id": "message_122",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 23940000.0,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your monthly salary is temporarily IDR 23,940,000 and the lower amount still applies to the next payroll."
+        }
+      ],
+      "summary": "The next recurring payroll is confirmed at IDR 23,940,000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_123": {
+      "message_id": "message_123",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_14616",
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The next payout is pending and the balance is not withdrawable until completed."
+        }
+      ],
+      "summary": "The pending ShiftPay payout is not confirmed or withdrawable and should be excluded from the forecast.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_124": {
+      "message_id": "message_124",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1672.0,
+          "currency": "EUR",
+          "effective_date": "2024-06-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The first salary is EUR 1,672 and is confirmed for 2024-06-15."
+        }
+      ],
+      "summary": "A confirmed one-time salary credit of EUR 1,672 is scheduled for 2024-06-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_125": {
+      "message_id": "message_125",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 26790000.0,
+          "currency": "IDR",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The first salary of IDR 26,790,000 is scheduled for 2025-11-15 and approved for processing."
+        }
+      ],
+      "summary": "An approved first salary payment of IDR 26,790,000 is scheduled for 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_126": {
+      "message_id": "message_126",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 29070000.0,
+          "currency": "IDR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary increased to IDR 29,070,000 effective 2026-07-15."
+        }
+      ],
+      "summary": "Recurring monthly salary increases to IDR 29,070,000 starting 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_127": {
+      "message_id": "message_127",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 30400000.0,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is IDR 30,400,000."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 13680000.0,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of IDR 13,680,000."
+        }
+      ],
+      "summary": "The next payroll includes regular salary of IDR 30,400,000 plus a confirmed one-time arrears payment of IDR 13,680,000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_128": {
+      "message_id": "message_128",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 44270000.0,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The confirmed base salary is IDR 44,270,000."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Commission from ongoing transactions has not been approved and is not paid until earned."
+        }
+      ],
+      "summary": "Confirmed base salary is IDR 44,270,000; unapproved ongoing commissions are excluded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_129": {
+      "message_id": "message_129",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "stopped",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Employment has ended and no regular salary payments are scheduled after the final settlement."
+        }
+      ],
+      "summary": "Regular salary payments stop after the final settlement.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_130": {
+      "message_id": "message_130",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2340.0,
+          "currency": "USD",
+          "effective_date": "2024-12-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The client approved an invoice payment of USD 2,340, with settlement expected on 2024-12-15."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Other submitted invoices are still awaiting approval."
+        }
+      ],
+      "summary": "A client-approved USD 2,340 invoice payment is expected on 2024-12-15; other invoices remain unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_131": {
+      "message_id": "message_131",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": "2025-05-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed salary is expected on 2025-05-23, replacing the earlier payroll date."
+        }
+      ],
+      "summary": "The confirmed payroll credit date is revised to 2025-05-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_132": {
+      "message_id": "message_132",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 137150,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to INR 137150."
+        }
+      ],
+      "summary": "The next salary credit is confirmed at INR 137150.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_133": {
+      "message_id": "message_133",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "refund",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The foreign-currency refund is still processing and the final credit will be calculated when it settles."
+        }
+      ],
+      "summary": "The refund remains unconfirmed and its home-currency amount is not yet known.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_134": {
+      "message_id": "message_134",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "reward",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The verified reward claim is still in process and has not entered the account."
+        }
+      ],
+      "summary": "The reward payment is pending and not yet received.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_135": {
+      "message_id": "message_135",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "",
+      "model": "gpt-5.6-luna"
+    },
+    "message_136": {
+      "message_id": "message_136",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "",
+      "model": "gpt-5.6-luna"
+    },
+    "message_137": {
+      "message_id": "message_137",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1284,
+          "currency": "USD",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of USD 1284 is confirmed for 2025-11-15."
+        }
+      ],
+      "summary": "A confirmed salary credit of USD 1284 is scheduled for 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_138": {
+      "message_id": "message_138",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1924.56,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is EUR 1924.56 and continues for the next payroll."
+        }
+      ],
+      "summary": "Monthly salary is temporarily EUR 1924.56 for the affected payroll cycle.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_139": {
+      "message_id": "message_139",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 847,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your confirmed base salary is EUR 847."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "commission",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending approval",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The commission shown for open deals is still pending approval."
+        }
+      ],
+      "summary": "Confirmed base salary is EUR 847; open-deal commission remains excluded pending approval.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_140": {
+      "message_id": "message_140",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1731.6,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to USD 1731.60."
+        }
+      ],
+      "summary": "The next salary credit is confirmed at USD 1731.60.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_141": {
+      "message_id": "message_141",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": 2376,
+          "currency": "EUR",
+          "effective_date": "2024-12-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of EUR 2376; settlement is expected on 2024-12-15."
+        }
+      ],
+      "summary": "Confirmed freelance invoice credit of EUR 2,376 expected on 2024-12-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_142": {
+      "message_id": "message_142",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": null,
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Cash reward requires payment of a processing fee and is not confirmed as withdrawable."
+        }
+      ],
+      "summary": "Potential reward is unconfirmed and requires an upfront fee.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_143": {
+      "message_id": "message_143",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 59000,
+          "currency": "INR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary will be INR 59000 with a confirmed credit date of 2026-07-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of INR 59,000 on 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_144": {
+      "message_id": "message_144",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "bonus",
+          "direction": "credit",
+          "amount": null,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Quarterly bonus remains subject to final review; amount and payment date are not approved."
+        }
+      ],
+      "summary": "Bonus is pending approval with no confirmed amount or date.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_145": {
+      "message_id": "message_145",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "debit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Final amount in the primary currency will be confirmed using the exchange rate when the transaction settles."
+        }
+      ],
+      "summary": "Final foreign-currency payment amount is not yet determined.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_146": {
+      "message_id": "message_146",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Foreign-currency refund is still processing and the home-currency credit will be calculated when it settles."
+        }
+      ],
+      "summary": "Refund credit is pending and its amount is undetermined.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_147": {
+      "message_id": "message_147",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "rent",
+          "direction": "debit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Renewed lease increases monthly rent by 12%, applying from the next rent payment."
+        }
+      ],
+      "summary": "Monthly rent will increase by 12% from the next payment; new amount is unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_148": {
+      "message_id": "message_148",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 31889,
+          "currency": "ZAR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Next salary is reduced to ZAR 31889 due to approved unpaid leave."
+        }
+      ],
+      "summary": "Next salary is confirmed at ZAR 31,889.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_149": {
+      "message_id": "message_149",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 145000,
+          "currency": "INR",
+          "effective_date": "2024-09-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary from the new employer is INR 145000, confirmed for 2024-09-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of INR 145,000 on 2024-09-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_150": {
+      "message_id": "message_150",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "Confirms an already settled reimbursement and states that no additional reimbursement is scheduled.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_151": {
+      "message_id": "message_151",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_17426",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 627,
+          "currency": "EUR",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary has increased to EUR 627, applying from 2026-07-15."
+        }
+      ],
+      "summary": "Monthly salary credit changes to EUR 627 from 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_152": {
+      "message_id": "message_152",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_17662",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 65.12,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Refund has been initiated but has not reached your account yet."
+        }
+      ],
+      "summary": "The merchant refund remains uncredited and should not be forecast as received.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_153": {
+      "message_id": "message_153",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1750.32,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is EUR 1750.32 for the affected pay cycle."
+        }
+      ],
+      "summary": "Temporary salary amount is EUR 1750.32 for the affected payroll cycle.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_154": {
+      "message_id": "message_154",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_17870",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 137000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": "2025-08-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed salary is now expected on 2025-08-23, replacing the earlier payroll date."
+        }
+      ],
+      "summary": "Payroll credit date moves to 2025-08-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_155": {
+      "message_id": "message_155",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1222.65,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to EUR 1222.65."
+        }
+      ],
+      "summary": "The next salary payment is EUR 1222.65.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_156": {
+      "message_id": "message_156",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 38190000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": "2025-11-15",
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of IDR 38190000 is scheduled for 2025-11-15 and has been approved and sent for processing."
+        }
+      ],
+      "summary": "An approved first salary credit of IDR 38190000 is scheduled for 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_157": {
+      "message_id": "message_157",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_18269",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 8800,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "not_posted",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "A reversal has not been posted to the account yet."
+        }
+      ],
+      "summary": "The disputed charge reversal is not posted and should not be forecast as a credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_158": {
+      "message_id": "message_158",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The next ShiftPay payment is pending, may change, and the balance is not withdrawable."
+        }
+      ],
+      "summary": "The pending, variable ShiftPay payment is not confirmed or withdrawable.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_159": {
+      "message_id": "message_159",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Quarterly bonus amount and payment date have not been approved."
+        }
+      ],
+      "summary": "The quarterly bonus remains unconfirmed with no approved amount or date.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_160": {
+      "message_id": "message_160",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": "2026-03-26",
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The seasonal contract has ended; no off-season income or extension is confirmed."
+        }
+      ],
+      "summary": "Seasonal salary income has ended, with no confirmed replacement income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_161": {
+      "message_id": "message_161",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "No amounts or dates are provided for the two card minimum payments.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_162": {
+      "message_id": "message_162",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2024,
+          "currency": "EUR",
+          "effective_date": "2026-01-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary will be EUR 2024; confirmed credit date is 2026-01-15."
+        }
+      ],
+      "summary": "A confirmed first salary credit of EUR 2024 is scheduled for 2026-01-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_163": {
+      "message_id": "message_163",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_19182",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Investment value has fallen, but it has not been sold and there is no cash transaction."
+        }
+      ],
+      "summary": "The message reports an unrealized investment valuation change, not a cash-flow event.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_164": {
+      "message_id": "message_164",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_19334",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The dispute is open and no reversal has been posted yet."
+        }
+      ],
+      "summary": "A possible reversal remains unposted and should not be forecast as a credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_165": {
+      "message_id": "message_165",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_date_change",
+          "target_event_id": "event_19466",
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": "2025-02-23",
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed salary is expected on 2025-02-23, replacing the previous payroll date."
+        }
+      ],
+      "summary": "The payroll date is replaced with 2025-02-23.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_166": {
+      "message_id": "message_166",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The current seasonal contract has ended."
+        }
+      ],
+      "summary": "Seasonal contract income has ended; no replacement income is confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_167": {
+      "message_id": "message_167",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "refund",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The foreign-currency refund is still processing and the final home-currency credit may change."
+        }
+      ],
+      "summary": "The refund is pending and its final credited amount is not yet determined.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_168": {
+      "message_id": "message_168",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The next payout is pending and the balance is not withdrawable until completed."
+        }
+      ],
+      "summary": "The pending payout is not yet withdrawable or confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_169": {
+      "message_id": "message_169",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": "event_19893",
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2424,
+          "currency": "USD",
+          "effective_date": "2026-07-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly salary has increased to USD 2424, applying from 2026-07-15."
+        }
+      ],
+      "summary": "Monthly salary changes to USD 2424 starting 2026-07-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_170": {
+      "message_id": "message_170",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1914,
+          "currency": "EUR",
+          "effective_date": "2026-04-15",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary of EUR 1914 resumes on 2026-04-15."
+        },
+        {
+          "effect_type": "recurring_start",
+          "target_event_id": null,
+          "category": "childcare",
+          "direction": "debit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "medium",
+          "evidence_text": "A new recurring childcare payment begins in the same month."
+        }
+      ],
+      "summary": "Salary of EUR 1914 resumes on 2026-04-15, and a new recurring childcare payment begins in April.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_171": {
+      "message_id": "message_171",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1346.4,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is EUR 1346.40 and continues for the next payroll."
+        }
+      ],
+      "summary": "Confirmed temporary monthly salary amount of EUR 1346.40 for the next payroll.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_172": {
+      "message_id": "message_172",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_20379",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 9440.0,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Refund has been initiated but has not reached your account yet."
+        }
+      ],
+      "summary": "The refund remains unreceived and should not be forecast as available funds yet.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_173": {
+      "message_id": "message_173",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "invoice_payment",
+          "direction": "credit",
+          "amount": 35200.0,
+          "currency": "ZAR",
+          "effective_date": "2026-01-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Client approved an invoice payment of ZAR 35200; settlement is expected on 2026-01-15."
+        }
+      ],
+      "summary": "Confirmed one-time invoice payment of ZAR 35,200 expected on 2026-01-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_174": {
+      "message_id": "message_174",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "No new financial change; the message clarifies that the settled payment was a closed expense reimbursement, not recurring salary.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_175": {
+      "message_id": "message_175",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "rent",
+          "direction": "debit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Monthly rent increases by 12% starting with the next rent payment."
+        }
+      ],
+      "summary": "Confirmed 12% increase to the recurring monthly rent, with the new amount unspecified.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_176": {
+      "message_id": "message_176",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 260000.0,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is INR 260000."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 117000.0,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The same payroll includes a one-time arrears adjustment of INR 117000."
+        }
+      ],
+      "summary": "Next payroll includes INR 260,000 regular salary and a confirmed one-time INR 117,000 arrears adjustment.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_177": {
+      "message_id": "message_177",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Bonus remains subject to final review; amount and payment date are not approved."
+        }
+      ],
+      "summary": "The quarterly bonus is unconfirmed and has no usable amount or date.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_178": {
+      "message_id": "message_178",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 30400000.0,
+          "currency": "IDR",
+          "effective_date": "2026-04-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary is IDR 30400000 with a confirmed credit date of 2026-04-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of IDR 30,400,000 on 2026-04-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_179": {
+      "message_id": "message_179",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_21101",
+          "category": "utilities",
+          "direction": "debit",
+          "amount": 73.0,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "failed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The previous debit attempt failed and the bill remains outstanding."
+        }
+      ],
+      "summary": "The EUR 73 bill payment attempt failed; the bill remains outstanding. A future retry is not confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_180": {
+      "message_id": "message_180",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One household employment record has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2827.0,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The remaining confirmed monthly salary is EUR 2827."
+        }
+      ],
+      "summary": "One household employment income ended; remaining confirmed monthly salary is EUR 2,827.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_181": {
+      "message_id": "message_181",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 2772,
+          "currency": "EUR",
+          "effective_date": "2024-06-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 2772; confirmed credit date 2024-06-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit scheduled for 2024-06-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_182": {
+      "message_id": "message_182",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 16910000,
+          "currency": "IDR",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Gaji pertama IDR 16910000 dijadwalkan pada 2025-11-15 dan telah disetujui payroll."
+        }
+      ],
+      "summary": "Confirmed first salary credit scheduled for 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_183": {
+      "message_id": "message_183",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_21582",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "investigating",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Extra card charge is still being investigated; no reversal has been posted."
+        }
+      ],
+      "summary": "No confirmed refund or reversal; dispute remains open.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_184": {
+      "message_id": "message_184",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "refund",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Foreign-currency refund is still processing and the final home-currency credit may change."
+        }
+      ],
+      "summary": "Refund is pending and has no confirmed amount or date.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_185": {
+      "message_id": "message_185",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_21785",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "unrealized",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Displayed investment value has fallen, but the investment has not been sold and there is no cash transaction."
+        }
+      ],
+      "summary": "Unrealized investment valuation change with no cash effect.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_186": {
+      "message_id": "message_186",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2026-03-26",
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Seasonal contract has ended; no off-season income or extension is confirmed."
+        }
+      ],
+      "summary": "Seasonal employment income has ended and no continuation is confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_187": {
+      "message_id": "message_187",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "USD",
+          "effective_date": "2024-11-26",
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One household employment record has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 912,
+          "currency": "USD",
+          "effective_date": "2024-11-26",
+          "replacement_date": null,
+          "new_status": "active",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Remaining confirmed monthly salary is USD 912."
+        }
+      ],
+      "summary": "One household salary ended; remaining confirmed monthly salary is USD 912.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_188": {
+      "message_id": "message_188",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 62000,
+          "currency": "INR",
+          "effective_date": "2026-01-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of INR 62000; confirmed credit date is 2026-01-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit scheduled for 2026-01-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_189": {
+      "message_id": "message_189",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2024-02-29",
+          "replacement_date": null,
+          "new_status": "ended",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Seasonal contract has ended; no off-season income or extension is confirmed."
+        }
+      ],
+      "summary": "Seasonal employment income has ended and no continuation is confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_190": {
+      "message_id": "message_190",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 968,
+          "currency": "EUR",
+          "effective_date": "2025-08-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of EUR 968 is scheduled for 2025-08-15 and approved for processing."
+        }
+      ],
+      "summary": "Confirmed first salary credit scheduled for 2025-08-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_191": {
+      "message_id": "message_191",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1680,
+          "currency": "USD",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of USD 1680 is confirmed for 2025-11-15."
+        }
+      ],
+      "summary": "Confirmed one-time salary credit of USD 1680 on 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_192": {
+      "message_id": "message_192",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": "2026-03-24",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "There are no regular salary payments scheduled after the final settlement."
+        }
+      ],
+      "summary": "Regular salary payments stop after the final settlement.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_193": {
+      "message_id": "message_193",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1528.56,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Temporary monthly pay is EUR 1528.56 and continues for the next payroll."
+        }
+      ],
+      "summary": "Temporary monthly salary is EUR 1528.56 for the next payroll.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_194": {
+      "message_id": "message_194",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1548,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your confirmed base salary is USD 1548."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The commission shown for open deals is still pending approval."
+        }
+      ],
+      "summary": "Confirmed base salary is USD 1548; pending commission is excluded from forecasting.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_195": {
+      "message_id": "message_195",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 702,
+          "currency": "USD",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your next salary is reduced to USD 702 due to approved unpaid leave."
+        }
+      ],
+      "summary": "Next salary is a confirmed reduced credit of USD 702.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_196": {
+      "message_id": "message_196",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 53680,
+          "currency": "ZAR",
+          "effective_date": "2024-12-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your first salary ... is ZAR 53680. It is confirmed for 2024-12-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of ZAR 53680 on 2024-12-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_197": {
+      "message_id": "message_197",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_23203",
+          "category": "shopping",
+          "direction": "debit",
+          "amount": 988000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The additional card charge is still under investigation."
+        },
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "shopping",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "not_recorded",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The reversing funds have not been recorded in the account."
+        }
+      ],
+      "summary": "The additional card charge remains under investigation; no reversal credit is recorded.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_198": {
+      "message_id": "message_198",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_23306",
+          "category": "utilities",
+          "direction": "debit",
+          "amount": 192,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "retry_may_be_attempted",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Another debit may be attempted for the outstanding bill."
+        }
+      ],
+      "summary": "A retry may be attempted, but it is not confirmed as a new financial event.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_199": {
+      "message_id": "message_199",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "bonus",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The quarterly bonus is subject to final review; amount and payment date are not approved."
+        }
+      ],
+      "summary": "Quarterly bonus remains unconfirmed and is excluded from forecasting.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_200": {
+      "message_id": "message_200",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 214000,
+          "currency": "INR",
+          "effective_date": "2024-06-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Your first salary will be INR 214000. The confirmed credit date is 2024-06-15."
+        }
+      ],
+      "summary": "Confirmed first salary credit of INR 214000 on 2024-06-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_201": {
+      "message_id": "message_201",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_23855",
+          "category": "utilities",
+          "direction": "debit",
+          "amount": 42.0,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Another debit may be attempted; the retry is not confirmed."
+        }
+      ],
+      "summary": "The previous debit failed, and a possible retry is unconfirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_202": {
+      "message_id": "message_202",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "The debit and credit were an internal transfer between the user's own accounts, with no net financial effect.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_203": {
+      "message_id": "message_203",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": "2024-11-23",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One source of household employment income has ended."
+        },
+        {
+          "effect_type": "recurring_amount_change",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 48260000.0,
+          "currency": "IDR",
+          "effective_date": "2024-11-23",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Confirmed remaining monthly salary is IDR 48,260,000."
+        }
+      ],
+      "summary": "One employment income source ended; remaining confirmed monthly salary is IDR 48,260,000.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_204": {
+      "message_id": "message_204",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 1485.0,
+          "currency": "EUR",
+          "effective_date": "2025-05-15",
+          "replacement_date": null,
+          "new_status": "confirmed",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Salary of EUR 1,485 is confirmed for 2025-05-15."
+        }
+      ],
+      "summary": "A confirmed EUR 1,485 salary credit is expected on 2025-05-15; home-currency value is unknown.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_205": {
+      "message_id": "message_205",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_24352",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The investment value fell, but it was not sold and there was no cash transaction."
+        }
+      ],
+      "summary": "The message concerns an unrealized investment valuation change, not cash.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_206": {
+      "message_id": "message_206",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "recurring_stop",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": null,
+          "currency": "INR",
+          "effective_date": "2024-02-28",
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "The current seasonal contract has ended."
+        }
+      ],
+      "summary": "Seasonal employment income has ended; no renewal or replacement income is confirmed.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_207": {
+      "message_id": "message_207",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": "event_24534",
+          "category": "investment",
+          "direction": null,
+          "amount": null,
+          "currency": "EUR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Portfolio value increased, but no units were sold and no cash proceeds were generated."
+        }
+      ],
+      "summary": "The message concerns an unrealized investment valuation increase, not cash income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_208": {
+      "message_id": "message_208",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "shopping",
+          "direction": "debit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The final home-currency amount will be determined at settlement."
+        }
+      ],
+      "summary": "The foreign-currency debit's final home-currency amount is not yet known.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_209": {
+      "message_id": "message_209",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": null,
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "The prize payment is still processing and has not been credited."
+        }
+      ],
+      "summary": "The prize claim is pending and cannot yet be counted as received income.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_210": {
+      "message_id": "message_210",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 38280.0,
+          "currency": "ZAR",
+          "effective_date": "2025-11-15",
+          "replacement_date": null,
+          "new_status": "scheduled",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "First salary of ZAR 38,280 is scheduled and approved for 2025-11-15."
+        }
+      ],
+      "summary": "An approved first salary credit of ZAR 38,280 is scheduled for 2025-11-15.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_211": {
+      "message_id": "message_211",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 103000,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Regular salary for the next payroll is INR 103000."
+        },
+        {
+          "effect_type": "one_time_credit",
+          "target_event_id": null,
+          "category": "salary",
+          "direction": "credit",
+          "amount": 46350,
+          "currency": "INR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": null,
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "One-time arrears adjustment of INR 46350."
+        }
+      ],
+      "summary": "Next payroll includes INR 103000 regular salary and a confirmed one-time INR 46350 arrears credit.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_212": {
+      "message_id": "message_212",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "bonus",
+          "direction": "credit",
+          "amount": null,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Quarterly bonus is still awaiting performance review; amount and payment date are not approved."
+        }
+      ],
+      "summary": "The quarterly bonus remains unconfirmed, with no approved amount or payment date.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_213": {
+      "message_id": "message_213",
+      "financially_relevant": false,
+      "effects": [],
+      "summary": "The message describes transfers between the user's own accounts but provides no concrete amount or forecasting change.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_214": {
+      "message_id": "message_214",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "ignore_unconfirmed",
+          "target_event_id": null,
+          "category": "refund",
+          "direction": "credit",
+          "amount": null,
+          "currency": null,
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "processing",
+          "confirmed": false,
+          "confidence": "high",
+          "evidence_text": "Foreign-currency refund is still processing and the final home-currency credit may change with the settlement-date rate."
+        }
+      ],
+      "summary": "The refund is not yet settled and its home-currency amount is undetermined.",
+      "model": "gpt-5.6-luna"
+    },
+    "message_215": {
+      "message_id": "message_215",
+      "financially_relevant": true,
+      "effects": [
+        {
+          "effect_type": "event_status_change",
+          "target_event_id": "event_25342",
+          "category": "shopping",
+          "direction": "credit",
+          "amount": 1444000,
+          "currency": "IDR",
+          "effective_date": null,
+          "replacement_date": null,
+          "new_status": "pending",
+          "confirmed": true,
+          "confidence": "high",
+          "evidence_text": "Refund has been processed but has not yet reached the account."
+        }
+      ],
+      "summary": "The IDR 1444000 merchant refund remains pending and has not yet been credited.",
+      "model": "gpt-5.6-luna"
+    }
+  },
+  "usage": {
+    "input_tokens": 246025,
+    "output_tokens": 37632,
+    "total_tokens": 283657
+  }
+}

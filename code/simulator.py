@@ -5,6 +5,15 @@ import pandas as pd
 from data import (
     get_request_state,
     get_explicit_future_events,
+    include_in_cashflow,
+    normalize_amount,
+)
+
+from message_effects import (
+    get_applicable_message_effects,
+    apply_targeted_event_effects,
+    apply_recurring_message_effects,
+    build_one_time_message_events,
 )
 
 from recurrence import (
@@ -98,7 +107,9 @@ def build_financial_timeline(
     )
 
     start_date = (
-        request["request_date"]
+        request[
+            "request_date"
+        ]
     )
 
     end_date = (
@@ -106,8 +117,60 @@ def build_financial_timeline(
         + timedelta(days=90)
     )
 
-    # Only information available before
-    # the request is used for recurrence.
+    # --------------------------------------------------
+    # Messages known at request time
+    # --------------------------------------------------
+
+    message_effects = (
+        get_applicable_message_effects(
+            request[
+                "user_id"
+            ],
+            request[
+                "request_id"
+            ],
+            start_date
+        )
+    )
+
+    # --------------------------------------------------
+    # Apply message changes to concrete CSV events
+    # --------------------------------------------------
+
+    user_events = (
+        apply_targeted_event_effects(
+            user_events,
+            message_effects
+        )
+    )
+
+    # Message evidence may have changed:
+    # amount, date, or status.
+    # Recalculate these columns before forecasting.
+
+    user_events[
+        "include_in_cashflow"
+    ] = user_events.apply(
+        include_in_cashflow,
+        axis=1
+    )
+
+    user_events[
+        "normalized_amount"
+    ] = user_events.apply(
+        lambda event: normalize_amount(
+            event,
+            profile[
+                "home_currency"
+            ]
+        ),
+        axis=1
+    )
+
+    # --------------------------------------------------
+    # Historical recurrence
+    # --------------------------------------------------
+
     history = historical_events(
         user_events,
         start_date
@@ -121,6 +184,27 @@ def build_financial_timeline(
         )
     )
 
+    # --------------------------------------------------
+    # Apply message changes to recurring streams
+    # --------------------------------------------------
+
+    projected_events = (
+        apply_recurring_message_effects(
+            projected_events,
+            message_effects,
+            start_date,
+            end_date,
+            profile[
+                "home_currency"
+            ],
+            normalize_amount
+        )
+    )
+
+    # --------------------------------------------------
+    # Explicit future CSV events
+    # --------------------------------------------------
+
     explicit_events = (
         get_explicit_future_events(
             user_events,
@@ -129,9 +213,32 @@ def build_financial_timeline(
         )
     )
 
+    # --------------------------------------------------
+    # Confirmed one-time events from messages
+    # --------------------------------------------------
+
+    message_events = (
+        build_one_time_message_events(
+            message_effects,
+            start_date,
+            end_date,
+            profile[
+                "home_currency"
+            ],
+            normalize_amount
+        )
+    )
+
+    # --------------------------------------------------
+    # Final timeline
+    # --------------------------------------------------
+
     timeline = combine_timelines(
         projected_events,
-        explicit_events
+        (
+            explicit_events
+            + message_events
+        )
     )
 
     return (
